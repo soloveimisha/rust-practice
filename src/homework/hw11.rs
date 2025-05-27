@@ -1,8 +1,8 @@
 use rand::prelude::*;
 
 fn gen_random_vector(n: usize) -> Vec<i32> {
-    let mut rng = rand::rng(); // новая форма вместо thread_rng()
-    (0..n).map(|_| rng.random_range(10..100)).collect() // random_range вместо gen_range
+    let mut rng = rand::rng(); 
+    (0..n).map(|_| rng.random_range(10..100)).collect() 
 }
 
 fn min_adjacent_sum(data: &[i32]) -> Option<((usize, usize), i32)> {
